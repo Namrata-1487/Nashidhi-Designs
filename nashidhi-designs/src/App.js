@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Pages/Header';
 import Home from './components/Pages/Home';
 import Services from './components/Pages/Services';
@@ -13,12 +13,12 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/services" component={Services} />
-          <Route path="/portfolio" component={Portfolio} />
-          <Route path="/contact" component={Contact} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
         <Footer />
       </div>
     </Router>

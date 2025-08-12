@@ -1,0 +1,47 @@
+.service,
+.pricing-tier {
+ margin: 20px 0;
+ padding: 20px;
+ border: 1px solid #ccc;
+ border-radius: 8px;
+ transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service:hover,
+.pricing-tier:hover {
+ transform: scale(1.05);
+ box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-tiers {
+ display: flex;
+ justify-content: space-around;
+}
+
+.pricing-tier {
+ width: 30%;
+ text-align: center;
+ background-color: #f9f9f9;
+ border-radius: 8px;
+ padding: 20px;
+ transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pricing-tier:hover {
+ transform: scale(1.05);
+ box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+button {
+ padding: 10px 20px;
+ border: none;
+ border-radius: 5px;
+ background-color: #007bff;
+ color: white;
+ cursor: pointer;
+ transition: background-color 0.3s;
+}
+
+button:hover {
+ background-color: #0056b3;
+}

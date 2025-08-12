@@ -1,0 +1,41 @@
+.portfolio-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+ gap: 20px;
+}
+
+.portfolio-card {
+ position: relative;
+ overflow: hidden;
+ border-radius: 10px;
+ box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.portfolio-card img {
+ width: 100%;
+ height: 220px;
+ object-fit: cover;
+ transition: transform .6s ease;
+}
+
+.portfolio-card:hover img {
+ transform: scale(1.08);
+}
+
+.portfolio-overlay {
+ position: absolute;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ padding: 18px;
+ background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+ color: #fff;
+ transform: translateY(30%);
+ transition: transform .3s ease, opacity .3s ease;
+ opacity: 0;
+}
+
+.portfolio-card:hover .portfolio-overlay {
+ transform: translateY(0);
+ opacity: 1;
+}
